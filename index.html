@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Alert Viewer</title>
+</head>
+<body>
+    <header>
+        <h1>Alert Viewer</h1>
+    </header>
+    <div class="search-container">
+        <div class="search-box">
+            <input type="text" placeholder="Search" id="searchText">
+            <button onclick="clearSearch()">Clear</button>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn" id="vehicleDropdownBtn">Select Vehicle &#9662;</button>
+            <div class="dropdown-content" id="vehicleDropdown">
+                <!-- Vehicles will be dynamically added here -->
+            </div>
+        </div>
+        <div class="date-range">
+            <label>Date Range:</label>
+            <input type="date" id="startDate" onchange="filterByDateRange()">
+            <span>to</span>
+            <input type="date" id="endDate" onchange="filterByDateRange()">
+        </div>
+    </div>
+    <div class="alert-container" id="alertsContainer">
+        <!-- Alerts will be dynamically added here -->
+    </div>
+    <footer>
+        <p>Copyright &copy; <u>enview.ai</u> 2023</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
